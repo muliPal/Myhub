@@ -1,0 +1,52 @@
+html{
+height:100%;
+}
+
+body{
+   height:100%;
+   display: grid;
+   grid-template-rows: 30% 70%;
+   grid-template-areas: 
+       "header header"
+       "article article";
+}
+
+/*
+ Set the background colorThePut any new css commands in this comment
+*/
+header{
+   grid-area: header;
+   background-color: azure;
+}
+
+article{
+   grid-area: article;
+   background-color: lightblue;
+}
+
+/*Both the header and article sections have vertical scroll bars
+*/
+header, article{
+
+}
+
+/*
+Stop fieldset, including form, that are direct header children from ocupying the 
+whole screen*/
+header>fieldset,  form{
+   display:inline;
+}
+
+/*
+By default, the divs in a fieldset are indexded by 10 pixels
+*/
+details>div{
+   margin-left: 10px;
+}
+
+/*
+Alternate backgrounds for items in the header section
+*/
+header>*:nth-child(odd){
+   background-color: lightblue;
+}
