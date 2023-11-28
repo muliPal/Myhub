@@ -5,17 +5,28 @@
         <link rel="stylesheet" href="workplan.css" />
         <title>WORKPLAN</title>
 
+        <script>
+            function showcontent(content) {
+                // Get the content div
+                var contentDiv = document.getElementById('content');
+
+                // Set the innerHTML of the content div to the selected content
+                contentDiv.innerHTML = content;
+            }
+        </script>
+
     </head>
     <body>
         <div class="menu">
             <img src="muli.jpg" alt="muli" />
-          
+
 
         </div>
         <div class="view">
             <details open>
-                <summary>1.Rentize:Redesign Mutall Rental interface</summary>
-
+         
+                <summary><a href="#" onclick="showcontent('https://www.w3schools.com/')">1.Rentize:Redesign Mutall Rental interface</a></summary>
+ 
                 <details>
                     <summary>Plan</summary>
                     <p>1.Design a New client registration form</p>
@@ -35,22 +46,22 @@
                 <details>
                     <summary>2.2Plan</summary>
                     <p>2.2.1Capture images of receipts as soon as they are presented</p>
-                  
+
                 </details>
 
                 <details>
                     <summary>Outcome</summary>
-                    
+
                 </details>
             </details>
 
             <details open>
                 <summary>3.Cyber cafe:Bringing IT services closer to Mutall</summary>
                 <details>
-                     <summary>3.1 Outcome</summary>
-                <p>1.Provide huduma services</p>
-                <p>2.selling of phone and computer accessories</p>
-                <p>3.printing of invoices on request</p>
+                    <summary>3.1 Outcome</summary>
+                    <p>1.Provide huduma services</p>
+                    <p>2.selling of phone and computer accessories</p>
+                    <p>3.printing of invoices on request</p>
                 </details>
             </details>
 
@@ -58,7 +69,7 @@
                 <summary>4.Mulihub:showcasing my programming skills</summary>
                 <details>
                     <summary>outcome</summary>
-                <p>1.design my hub with nest</p>
+                    <p>1.design my hub with nest</p>
                 </details>
             </details>
 
