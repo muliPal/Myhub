@@ -1,93 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cyber.css" />
-    <title>CYBER CAFE</title>
-     <script>
-        function showContent(content) {
-            // Get the content div
-            var contentDiv = document.getElementById('content');
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="cyber.css" />
+        <title>CYBER CAFE</title>
+        <script>
+            function showContent() {
+                var contentDiv = document.getElementById('content');
+
+                // Fetch content from the PHP proxy script
+                fetch('proxy.php') // Replace with the correct path to your PHP script
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Failed to load content. HTTP status: ' + response.status);
+                            }
+                            return response.text();
+                        })
+                        .then(data => {
+                            contentDiv.innerHTML = data;
+                            console.log('Content fetched successfully:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error during fetch:', error.message);
+                            contentDiv.innerHTML = 'Failed to load content.';
+                        });
+            }
+
+
+   //        // Open a new window with the specified URL
+   //        window.open(url, '_self');
             
-            // Set the innerHTML of the content div to the selected content
-            contentDiv.innerHTML = content;
-        }
-    </script>
-  </head>
-  <body>
-    <div class="menu">
-       <h1 class="blinking-text">Electroblend Cybercafe.</h1>
-    </div>
-    <div class="view">
-      <details id="cyber">
-        <summary>Cyber services</summary>
-        <ol>
-          <li>Printing(Black & Colored)</li>
-          <li>Binding</li>
-          <li>Lamination</li>
-          <li>Bulk Photocopy</li>
-          <li>Typing</li>
-          <li>Scanning</li>
-        </ol>
-      </details>
-      <details id="services">
-        <summary>Online Services</summary>
-        <details>
-          <summary>KRA</summary>
-          <ol>
-               <li><a href="#" onclick="showContent('https://www.w3schools.com/')">KRA PIN Registration</a></li>
-            <li>Passport Application</li>
-            <li>KRA TAX Returns(VAT,ITI,RENTAL)</li>
-            <li>Tax compliance certificate</li>
-            <li>Advance Tax</li>
-            <li>Land rates and rent payments</li>
-            <li>Birth certificates Application</li>
-            <li>Temporary permit</li>
-            <li>Good Conduct</li>
-            <li>Business Name Registration</li>
-            <li>Bussiness Names Search and Research</li>
-          </ol>
-        </details>
-        <details>
-          <summary>NTSA Tims services</summary>
-          <ol>
-            <li>Transfer of Motorvehicle</li>
-            <li>Confirmation of ownership</li>
-            <li>Motor Vehicle Change of particulars</li>
-            <li>Duplicate Logbook</li>
-            <li>Number Plate</li>
-            <li>Confirmation of incharge</li>
-            <li>Forced Transfer</li>
-          </ol>
-        </details>
-        <details>
-          <summary>Motor vehicle</summary>
-          <ol type="1">
-            <li>Motor vehicle Booking inspection</li>
-            <li>E-sticker</li>
-            <li>Driving license Application</li>
-            <li>Motorvehicle Search of records</li>
-            <li>PSV</li>
-            <li>Duplicating Driving license</li>
-          </ol>
-        </details>
-      </details>
-      <details id="tutorials">
-        <summary>Documentation of services</summary>
-      </details>
-      <details id="businessplan">
-        <summary>Documentation of business plan</summary>
-      </details>
-      <details>
-        <summary>Video tutorial of MutallCyber services</summary>
-      </details>
-    </div>
-    <div id="content">
 
-    </div>
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <h1 class="blinking-text">Electroblend Cybercafe.</h1>
+        </div>
+        <div class="view">
+            <details id="cyber">
+                <summary>Cyber services</summary>
+                <ol>
+                    <li>Printing(Black & Colored)</li>
+                    <li>Binding</li>
+                    <li>Lamination</li>
+                    <li>Bulk Photocopy</li>
+                    <li>Typing</li>
+                    <li>Scanning</li>
+                </ol>
+            </details>
+            <details id="services">
+                <summary>Online Services</summary>
+                <details>
+                    <summary>KRA</summary>
+                    <ol>
+                        <li><a href="#" onclick="showContent()">KRA PIN Registration</a></li>
+                        <li>Passport Application</li>
+                        <li>KRA TAX Returns(VAT,ITI,RENTAL)</li>
+                        <li>Tax compliance certificate</li>
+                        <li>Advance Tax</li>
+                        <li>Land rates and rent payments</li>
+                        <li>Birth certificates Application</li>
+                        <li>Temporary permit</li>
+                        <li>Good Conduct</li>
+                        <li>Business Name Registration</li>
+                        <li>Bussiness Names Search and Research</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>NTSA Tims services</summary>
+                    <ol>
+                        <li>Transfer of Motorvehicle</li>
+                        <li>Confirmation of ownership</li>
+                        <li>Motor Vehicle Change of particulars</li>
+                        <li>Duplicate Logbook</li>
+                        <li>Number Plate</li>
+                        <li>Confirmation of incharge</li>
+                        <li>Forced Transfer</li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Motor vehicle</summary>
+                    <ol type="1">
+                        <li>Motor vehicle Booking inspection</li>
+                        <li>E-sticker</li>
+                        <li>Driving license Application</li>
+                        <li>Motorvehicle Search of records</li>
+                        <li>PSV</li>
+                        <li>Duplicating Driving license</li>
+                    </ol>
+                </details>
+            </details>
+            <details id="tutorials">
+                <summary>Documentation of services</summary>
+            </details>
+            <details id="businessplan">
+                <summary>Documentation of business plan</summary>
+            </details>
+            <details>
+                <summary>Video tutorial of MutallCyber services</summary>
+            </details>
+        </div>
+        <div id="content">
+        </div>
 
-    <footer class="foot">
-      <p>Developed by Benard muli</p>
-    </footer>
-  </body>
+        <footer class="foot">
+            <p>Developed by Benard muli</p>
+        </footer>
+    </body>
 </html>
