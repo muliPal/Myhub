@@ -22,8 +22,10 @@ body {
 
 .menu {
     grid-area: menu;
-    background:  rgb(73, 4, 138);
-    color: blue;
+    background:  rgb(112, 109, 129);
+    color: rgb(103, 212, 176);
+    display: flex;
+    justify-content: space-between;
 }
 img{
     width: 100px;
@@ -35,13 +37,18 @@ img{
     grid-area: view;
     background: beige;
     overflow-y: scroll;
+    overflow-style: marquee;
 }
-
-#content {
+#mutall{
+    background-image: url(logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*#content {
     grid-area: content;
     color: black;
     margin-right: 0;
-}
+}*/
 
 .foot {
     grid-area: foot;
@@ -50,13 +57,22 @@ img{
 body details details{
     font-weight: bold;
     margin-left: 10%;
-    color: goldenrod;
+    color: rgb(55, 116, 99);
+}
+
+details p{
+    color: rgb(98, 199, 51);
 }
 
 details details p {
     font-style: italic;
     font-weight: lighter;
-    color: blue;
+    color: rgb(141, 11, 11);
     margin-left: 12%
-       
+
+}
+#content{
+    background-image: url(muli1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -29,6 +29,7 @@ body {
     grid-area: view;
     background: beige;
     overflow-y: scroll;
+    cursor: pointer;
 }
 
 #content {
