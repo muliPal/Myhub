@@ -5,69 +5,255 @@
         <title>Workplan 2024</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="workplan2024.css">
     </head>
     <body>
-        <details open>
-            <summary>My projects 2024</summary>
-            <details open>
-                <summary>1.Balansys</summary>
-                <p>Receipt and stock control project</p>
-                <p>Continue with bmj stock control</p>
-                <p>Enter data in the database and then to quickbooks</p>
-            </details>
+        <div class="menu">
+
+            <div class="logo">
+                <img src="muli1.jpg" alt="muli.jpg">
+            </div>
+
+            <div class="nav">
+                <p>Benard muli</p>
+                <p>WORKPLAN 2024</p>
+                <P>Minutes</P>
+                <P>Myhub</P>
+                <P>About</P>
+            </div>
+
+        </div>
+
+        <div class="view">
 
             <details open>
-                <summary>2.Rentize</summary>
-                <p>Client registration and query consolidation.
-                    In conjunction with Anne's contract management system</p>
-            </details>
+                <summary>My projects 2024</summary>
+                <details open>
+                    <summary id="balansys">1.Balansys</summary>
+                    <p>Receipt and stock control project</p>
+                    <details open>
+                        <summary>activities</summary>
+                        <details open>
+                            <summary>1.Migration</summary>
+                            <p>This relates to database work</p>
+                            
+                            <ol type="1">
+                                <li>Load all the dirty/excel receipts</li>
+                                <li>Load receipts manually then write a program to load them as csv</li>
+                                <li>Loading of receipt images to the database</li>
+                                <li>Link the images to the url on the folder</li>
+                                <li>Matching the images to the excel data</li>
+                                <li>Indirect export of large image database from
+                                    client(pmuraya) to server (dev.mutall.co.ke)</li>
+                                <li>Link the accounting database to balansys</li>
+                            </ol>
+                        </details>
 
-            <details open>
-                <summary>3.Event planner</summary>
-                <p>Learning linux and understanding how the server works</p>
-            </details>
+                        <details>
+                            <summary>Registrar</summary>
+                            <ol>
+                                <li>Register all balansys users</li>
+                            </ol>
+                        </details>
 
-            <details open>
-                <summary>4.Tracker</summary>
-                <p>Managing the financial aspect of the internship e.g, tracking 
-                    intern loans, Kitchen consumption, monthly stipends</p>
-                <p>This project will involve kibe with his documentation work 
-                    and Mogaka who will help with development of the database</p>
-            </details>
+                    </details>
 
-            <details open>
-                <summary>5.Cybercafe:Cross origin</summary>
-                <p>Exploring how to communicate legitimately across origins</p>
-            </details>
+                </details>
 
-            <details open>
-                <summary>6.Relentless</summary>
-                <p>Building and learning the ins and outs of a business</p>
-                <p>Raising school fees for Diploma</p>
-            </details>
+                <details open>
+                    <summary id="rentize">2.Rentize</summary>
+                    <p>Client Registration and query consolidation. In conjunction
+                        with Anne's Contract management </p>
+                    <details>
+                        <summary>activities</summary>
 
-            <details open>
-                <summary>7.Mulihub</summary>
-                <p>showcasing my programming journey and skills</p>
-            </details>
+                        <details open>
+                            <summary>Registrar</summary>
+                            <ol type="1">
+                                <li>Collate all client agreements</li>
+                                <li>Design a new client registration form</li>
+                                <li>Use Ann's database to reproduce the contracts</li>
+                                <li>Capture details of missing contracts</li>
+                                <li>Look at the db and trace information back to the contracts</li>
+                            </ol>
+                        </details>
+                        
+                        <details>
+                            <summary>Migration</summary>
+                            <p>This relates to linking of the client agreement Work by Ann to mutall rental</p>
+                        </details>
 
-            <details open>
-                <summary>8.Intern support</summary>
-                <p>Getting interns accustomed to the work environment setting
-                    up of interns computers using kibe's documentation</p>
-            </details>
+                    </details>
 
-            <details open>
-                <summary>9.Diploma</summary>
-                <p>Doing a course in Software systems and principles at Nibs
-                    technical college Nairobi</p>
-            </details>
+                </details>    
 
-            <details open>
-                <summary>10.Mshauri</summary>
-                <p>Empowering the youth</p>
-            </details>
+                <details open>
+                    <summary id="eventPlanner">3.Event planner</summary>
+                    <p>Learning linux and understanding how the server works</p>
+                    <details>
+                        <summary>Activities</summary>
 
-        </details>
+                        <details open>
+                            <summary>CRON</summary>
+                            <ol>
+                                <li>Setting  up cron jobs on the server</li>
+                                <li>Setting up scheduler in windows</li>
+                            </ol>
+                        </details>
+
+                        <details open>
+                            <summary>Server</summary>
+                            <ol>
+                                <li>Installing of phpmyadmin on the server</li>
+                            </ol>
+                        </details>
+
+                    </details>
+
+                </details>
+
+                <details open>
+
+                    <summary id="finance">4.Tracker/Accounting/Finance</summary>
+
+                    <p>Managing the financial aspect of the internship</p>
+
+                    <details>
+                        <summary>Activities</summary>
+
+                        <details>
+                            <summary>Tracker</summary>
+
+                            <ol>
+                                <li>Record Monthly journal entries of </li>
+                                <li>Track all invoices and expenses of mutall </li>
+                            </ol>
+
+                        </details>
+
+                    </details>
+
+                </details>
+
+                <details open>
+                    <summary id="cybercafe">5.Cybercafe:Cross origin</summary>
+
+                    <details>
+                        <summary>Activities</summary>
+                        <ol>
+                            <li>Research on appropriate headers that solve
+                                the CORS problem (mogaka and karanja)</li>
+                        </ol>
+                    </details>
+
+                </details>
+                <details open>
+                    <summary id="mulihub">6.Mulihub</summary>
+
+                    <p>showcasing my programming journey and skills</p>
+                </details>
+
+                <details open>
+                    <summary id="relentless">7.Relentless</summary>
+                    <p>Building and learning the ins and outs of a business</p>
+                    <p>Raising school fees for Diploma</p>
+                </details>
+
+                <details open>
+
+                    <summary id="internSupport">8.Intern support</summary>
+
+                    <p>Getting interns accustomed to the work environment setting
+                        up of interns computers using kibe's documentation</p>
+                </details>
+
+                <details open>
+
+                    <summary id="diploma">9.Diploma</summary>
+
+                    <p>Doing a course in Software systems and principles at Nibs
+                        technical college Nairobi</p>
+
+                </details>                           
+
+                <details>
+                    <summary id="mshauri">10.Mshauri</summary>
+                    <p>Empowering the youth</p>
+                </details>
+
+            </details> 
+        </div>
+
+        <div id="content">
+
+        </div>
+
+        <div class="foot">
+
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                function showContent(projectId) {
+                    // Fetch content from the PHP proxy script
+                    fetch('proxy.php') // Replace with the correct path to your PHP script
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Failed to load content. HTTP status: ' + response.status);
+                                }
+                                return response.text();
+                            })
+                            .then(data => {
+                                document.getElementById('content').innerHTML = data;
+                                console.log(`Content for project ${projectId} fetched successfully:`, data);
+                            })
+                            .catch(error => {
+                                console.error('Error during fetch:', error.message);
+                                document.getElementById('content').innerHTML = 'Failed to load content.';
+                            });
+                }
+
+                document.getElementById('balansys').addEventListener('dbclick', function() {
+                    showContent(1); // Pass the project ID or any identifier for Balansys
+                });
+
+                document.getElementById('rentize').addEventListener('onclick', function() {
+                    showContent(2); // Pass the project ID or any identifier for Rentize
+                });
+
+                document.getElementById('eventPlanner').addEventListener('onclick', function() {
+                    showContent(3); // Pass the project ID or any identifier for Event Planner
+                });
+
+                document.getElementById('finance').addEventListener('onclick', function() {
+                    showContent(4); // Pass the project ID or any identifier for Finance
+                });
+
+                document.getElementById('cybercafe').addEventListener('onclick', function() {
+                    showContent(5); // Pass the project ID or any identifier for Cybercafe
+                });
+
+                document.getElementById('mulihub').addEventListener('onclick', function() {
+                    showContent(6); // Pass the project ID or any identifier for Mulihub
+                });
+
+                document.getElementById('relentless').addEventListener('onclick', function() {
+                    showContent(7); // Pass the project ID or any identifier for Relentless
+                });
+
+                document.getElementById('internSupport').addEventListener('onclick', function() {
+                    showContent(8); // Pass the project ID or any identifier for Intern Support
+                });
+
+                document.getElementById('diploma').addEventListener('onclick', function() {
+                    showContent(9); // Pass the project ID or any identifier for Diploma
+                });
+
+                document.getElementById('mshauri').addEventListener('onclick', function() {
+                    showContent(10); // Pass the project ID or any identifier for Mshauri
+                });
+            });
+        </script>
+
     </body>
 </html>
