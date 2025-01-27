@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Work plan 2025</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="workplan2025.css" />
+    </head>
+    <body>
+        <div class="menu">
+            <div>
+                <img src="http://206.189.207.206/muli/tracker/v/images/muli.jpg"
+                     alt="google.jpg">
+            </div>
+            <div class="nav">
+                <p>Benard Muli</p>
+                <p>WORKPLAN 2025</p>
+                <button class="toggle-btn" onclick="toggleDetails()">
+                    Toggle_All_Details
+                </button>
+                <button id="minutes">Minutes</button>
+
+            </div>
+        </div>
+
+        <div class="view">
+            <p><u>My projects 2025</u></p>
+            <details>
+                <summary id="balansys">
+                    1.Balansys: Receipt and Stock Control
+                </summary>
+                <ol type="1">
+                    <li>Deploy the system to the server.</li>
+                    <li>
+                        .2Empty the database and run the folder loader programme
+                        on the server
+                    </li>
+                    <li>Design a media query for mobile view.</li>
+                    <li>
+                        Immediately you save a receipt, Change the focus to
+                        Purchase
+                    </li>
+                    <li>
+                        If the selection is not on the receipt, the record does
+                        not save
+                    </li>
+                </ol>
+            </details>
+            <details>
+                <summary id="postek">
+                    2.Postek:Diaspora Gardens P.O.S
+                </summary>
+                <ol type="i">
+                    <li>Study data(reports,stock control sheets and receipts
+                        provided by Diaspora and create a database from it </li>
+                    <li>Load test data to the database</li>
+                    <li>Use the zone library to display the data</li>
+                    <li>Upload the Postek system and database to the remote
+                        server</li>
+                    <li>Test the system on the server using a mobile phone</li>
+
+                </ol>
+            </details>
+            <details>
+                <summary id="rentize">
+                    3.Rentize: Client and Contract Registration
+                </summary>
+                <ol type="1">
+                    <li>Collate all client agreements</li>
+                    <li>Design a new client registration form</li>
+                    <li>Produce invoices before the 26<sup>th</sup> </li>
+                </ol>
+            </details>
+
+            <details>
+                <summary id="eventPlanner">
+                    4.Event Planner: Learning Linux and Server
+                </summary>
+                <ol>
+                    <li>Setting up cron jobs on the server</li>
+                    <li>Installing of phpmyadmin on the server</li>
+                    <li>Setting up sockets</li>
+                    <li>Install all Software required for programming on linux</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary id="finance">
+                    5.Tracker/Accounting: Managing Internship Finances
+                </summary>
+                <ol>
+                    <li>Record Monthly journal entries of mutall</li>
+                    <li>Track all invoices and expenses of mutall </li>
+                    <li>Load inpts on itax before 20<sup>th</sup>every month</li>
+                    <li>Update Quickbooks every month</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>
+                    6.Intern support
+                </summary>
+                <ol>
+                    <li>Helping new interns install all the required software</li>
+                </ol>
+            </details>
+            <details>
+                <summary>
+                    7.Diploma: Advancing Education
+                </summary>
+                <ol>
+                    <li>Create a plan for Mutall work and school</li>
+                    <li></li>
+                </ol>
+            </details>
+            <details>
+                <summary>
+                    8.Mshauri: Becoming a Mentor
+                </summary>
+                <ol>
+                    <li>Share the lessons learnt in the process</li>
+                </ol>
+            </details>
+        </div>
+        <div id="content">
+            <video playsinline autoplay loop muted>
+                <source src="http://206.189.207.206/muli/nature.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="foot"></div>
+
+        <!--        <script>
+                    // Get all summary elements
+                    var summaries = document.querySelectorAll('summary');
+        //
+        //with the pathname of a file,get its contents
+                    async function fetchHtml() {
+                        //
+                        const response = await fetch('http://localhost/Portfolio/minutes/tasks.json');
+
+                        const file = await response.json();
+
+                        return file;
+                    }
+
+
+
+                    //loop through each task to find most recnt date
+                    function get_most_recent_date(project) {
+                        // Take all the keys in the project and convert them to a list
+                        const date_list = Object.keys(project);
+                        console.log(date_list);
+
+                        // Cast each date in the list to a JS date object
+                        const time_stamps = date_list.map(date => Date.parse(date));
+                        console.log(time_stamps);
+
+                        // The most recent date
+                        const max_time_stamp = Math.max(...time_stamps);
+                        console.log(max_time_stamp);
+
+                        // Convert the most recent timestamp to a date object
+                        const most_recent_date = new Date(max_time_stamp);
+                        console.log(most_recent_date);
+
+                        // Format the most recent date back to 'MM-DD-YYYY'
+                        const formatted_date = `${String(most_recent_date.getMonth() + 1).padStart(2, '0')}-${String(most_recent_date.getDate()).padStart(2, '0')}-${most_recent_date.getFullYear()}`;
+                        console.log(formatted_date);
+
+                        return `${formatted_date}`;
+                    }
+
+                    async function show_content() {
+                        const tasks = await fetchHtml();
+
+                        // Loop through each summary element and add click event listener
+                        summaries.forEach(function (summary) {
+                            summary.addEventListener('click', function () {
+                                // Get the ID of the clicked summary
+                                var id = this.id;
+
+                                // Display different content based on the ID
+                                switch (id) {
+                                    case 'balansys':
+                                        const recent_date = get_most_recent_date(tasks.balancys);
+
+                                        document.getElementById('content').innerText = tasks.balancys[recent_date];
+                                        break;
+                                    case 'rentize':
+                                        document.getElementById('content').innerText = 'Content for Rentize.';
+                                        break;
+                                    case 'eventPlanner':
+                                        document.getElementById('content').innerText = 'Content for Event Planner.';
+                                        break;
+                                    case 'finance':
+                                        document.getElementById('content').innerText = 'Content for Finance.';
+                                        break;
+                                        // Add cases for other summaries if needed
+                                    default:
+                                        document.getElementById('content').innerText = 'Default content.';
+                                }
+                            });
+                        });
+                    }
+                    ;
+                    show_content();
+                    function toggleDetails() {
+                        const details = document.querySelectorAll('details');
+                        details.forEach(detail => {
+                            detail.open = !detail.open;
+                        });
+                    }
+                </script>-->
+    </body>
+</html>
