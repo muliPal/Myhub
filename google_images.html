@@ -3,12 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="google_images.css" rel="stylesheet">
         <title>Google Drive Image</title>
     </head>
     <body>
-        <h1>Accessing an Image from Google Drive</h1>
-        <iframe src="https://drive.google.com/file/d/1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l/preview" width="640" height="480"></iframe>
-        <img src="https://drive.google.com/thumbnail?id=1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l" alt="Google Drive Image">
-        <img src="https://drive.google.com/uc?id=1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l" alt="accessing an img from google" style="width:500px; height:auto;">
+        <div id="header">
+            <!--add this class(class="blinking-text") to the h1 and enable blinking-->
+            <h1>4 Ways of Accessing and Displaying an Image from Google Drive</h1>
+        </div>
+        <div id="iframe">
+            <!--using an <iframe> to display an image in the google drive-->
+            <iframe src="https://drive.google.com/file/d/1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l/preview" width="640" height="480"></iframe>
+        </div>
+
+        <div id="thumbnail">
+            <!--using a thumbnail-->
+            <img src="https://drive.google.com/thumbnail?id=1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l" alt="Google Drive Image">
+        </div>
+
+        <div id="embedded">
+            <!--embeded images-->
+            <img src="https://drive.google.com/uc?id=1qvuaSnPYhmgmlwwGvjUAeOY8IGAs2V7l" alt="accessing an img from google" style="width:500px; height:auto;">
+        </div>
+        <div id="folder">
+
+        </div>
+
     </body>
 </html>

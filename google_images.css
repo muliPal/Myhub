@@ -1,9 +1,65 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 27 Jan 2025, 22:02:52
-    Author     : Muli
-*/
-
+/*setting the size of my html 100% of the view port*/
+html{
+    width:100%;
+    height: 100%;
+}
+/*Removing the margins to ensure the grid fits my view port*/
+/*shadding my borders to make the grid areas visible*/
+*{
+    margin: 0;
+    border: 1px solid black;
+}
+/*this is where i define and partition my grid*/
+/*restricting my page from overflowing to remove the unnecessary scroll bars
+that i am not aware of why they appear*/
+body{
+    width:100%;
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    grid-template-areas:
+        'header header'
+        'iframe embeded'
+        'thumbnail folder';
+    grid-template-rows: 10% 45% 45%;
+    grid-template-columns: 50% 50%;
+}
+#header{
+    text-align: center;
+    grid-area: header;
+}
+#iframe{
+    grid-area: iframe;
+}
+#thumbnail{
+    grid-area: thumbnail;
+}
+#embedded{
+    grid-area: embeded;
+}
+#folder{
+    grid-area: folder;
+}
+/*here i style my iframe so that it fits in the grid section allocated for it*/
+iframe{
+    width: auto;
+    height: 100%;
+}
+/*The @keyframes rule defines how the opacity of the element changes over time
+(from fully visible to invisible and back).*/
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*.blinking-text class ties the animation (@keyframes blink) to the element*/
+.blinking-text {
+    border: none;
+    animation: blink 1s infinite;
+}
