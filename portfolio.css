@@ -28,6 +28,8 @@ div{
 }
 .image{
     grid-area: image;
+    background-color: black;
+  
 }
 .intro{
     grid-area: intro;
@@ -49,4 +51,13 @@ div{
 }
 .footer{
     grid-area: footer;
+}
+.image img{
+    height: 100%;
+    width: auto;
+    border-radius: 20%;
+}
+.books img{
+    height: 100%;
+    width: fit-content;
 }
