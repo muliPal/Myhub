@@ -11,7 +11,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-areas: 
-    'menu menu menu'
+    'image menu menu'
     'image intro about'
     'image projects projects'
     'books quotes decorative'
@@ -28,7 +28,7 @@ div{
 }
 .image{
     grid-area: image;
-    background-color: black;
+    /* background-color: black; */
   
 }
 .intro{
@@ -56,8 +56,10 @@ div{
     height: 100%;
     width: auto;
     border-radius: 20%;
+    transform: scalex(-1);
 }
 .books img{
     height: 100%;
     width: fit-content;
+   
 }

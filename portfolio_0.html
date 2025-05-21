@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Benard Muli Portfolio</title>
+        <link rel="stylesheet" href="portfolio.css">
+        <style>
+            html {
+                height: 100vh;
+                width: 100vw;
+            }
+            * {
+                margin: 0;
+                overflow: hidden;
+                font-family: 'Segoe UI', sans-serif;
+                border:none;
+            }
+            body {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-areas:
+                    'menu menu menu'
+                    'image intro about'
+                    'image projects decorative'
+                    'books quotes decorative'
+                    'footer footer footer';
+                grid-template-columns: 23% 37% 40%;
+                grid-template-rows: 10% 25% 25% 30% 10%;
+            }
+            div
+            .quotes, .intro {
+                padding: 10px;
+                box-sizing: border-box;
+                overflow-y: scroll;
+            }
+            .menu {
+                grid-area: menu;
+                background: #222;
+                color: #fff;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+                overflow: hidden;
+            }
+            span{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 3em;
+            }
+            .menu p {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .image {
+                grid-area: image;
+                background-color: #f0f0f0;
+                overflow: hidden;
+            }
+            .image img {
+                height: 100%;
+                width: auto;
+                border-radius: 20%;
+                transform: scaleX(-1);
+            }
+            .intro {
+                grid-area: intro;
+            }
+            .intro h1 {
+                font-size: 2em;
+                color: #333;
+            }
+            .about {
+                grid-area: about;
+                background: #e0f7fa;
+            }
+            .about p {
+                font-style: italic;
+            }
+            .projects {
+                grid-area: projects;
+                background: #fffde7;
+            }
+            .books {
+                grid-area: books;
+            }
+            .quotes {
+                grid-area: quotes;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                background: #ede7f6;
+                gap: 20px;
+                padding: 1em;
+                height: 100%;
+            }
+
+            .quotes blockquote {
+                scroll-snap-align: start;
+                flex: 0 0 100%;
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 2em;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .decorative {
+                grid-area: decorative;
+                background: #fce4ec;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer {
+                grid-area: footer;
+                background: #424242;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <span>
+                <h1>Benard Muli</h1>
+            </span>
+            <span>
+                <p><a href="http://localhost/Portfolio/v/code/workplan2025.html" style="color:white; text-decoration:none;">My Projects</a></p>
+                <p><a href="#books" style="color:white; text-decoration:none;">Books</a></p>
+                <p><a href="#contact" style="color:white; text-decoration:none;">Contact</a></p>
+            </span>
+        </div>
+
+        <div class="image">
+            <img src="../../images/DSC_1441.jpg" alt="Benard Muli">
+        </div>
+
+        <div class="intro">
+            <article><strong>Mission:</strong> To inspire and uplift the youth through creativity, technology, and wisdom.</article>
+            <article><strong>Vision:</strong> Building an empire of impact by teaching, building, and mentoring.</article>
+            <article><strong>Archetype:</strong> The Creator & The Sage - I build and share to empower others.</article>
+            <article>
+                <p><strong>Qualifications:</strong></p>
+                <ul>
+                    <li>Programming (Frontend & Backend)</li>
+                    <li>Accounting (Practical and theoretical)</li>
+                    <li>Branding (Visual and strategic)</li>
+                </ul>
+            </article>
+            <p>I don’t wait for opportunities — I create them.</p>
+        </div>
+
+        <div class="about">
+            <p>I am a visionary young African leader, founder of Umoja Techiez, and CEO of Bria & Peculiar Accessories. I believe in building from scratch and using my story to empower others.</p>
+        </div>
+
+        <div class="projects" id="projects">
+            <h2>Featured Projects:</h2>
+            <ul>
+                <li>Balansys — Point of Sale system</li>
+                <li>Postek — Digital product catalog with analytics</li>
+                <li>Umoja Techiez — Community-led tech mentorship</li>
+                <li>Bria Accessories — Fashion meets purpose</li>
+            </ul>
+        </div>
+
+        <div class="books" id="books">
+            <h3>Books That Inspired Me:</h3>
+            <ul>
+                <li>How to Win Friends and Influence People – Dale Carnegie</li>
+                <li>The Almanack of Naval Ravikant</li>
+                <li>Atomic Habits – James Clear</li>
+                <li>Think and Grow Rich – Napoleon Hill</li>
+            </ul>
+        </div>
+
+        <div class="quotes">
+            <blockquote>
+                <h3>Fulfillment Through Service</h3>
+                <p>“The only ones among you who will be really happy are those who will have sought and found how to serve.”</p>
+                <footer>— Albert Schweitzer</footer>
+            </blockquote>
+
+            <blockquote>
+                <h3>Mentorship as a Cornerstone</h3>
+                <p>“Mentoring is a brain to pick, an ear to listen, and a push in the right direction.”</p>
+                <footer>— John Crosby</footer>
+            </blockquote>
+
+            <blockquote>
+                <h3>Lighting the Way for Others</h3>
+                <p>“We're here for a reason... to lead people through the dark.”</p>
+                <footer>— Whoopi Goldberg</footer>
+            </blockquote>
+            <blockquote>
+                <h3>Mentorship as a Cornerstone</h3>
+                <p>“Mentoring is a brain to pick, an ear to listen, and a push in the right direction.”</p>
+                <footer>— John Crosby</footer>
+            </blockquote>
+            <blockquote>
+                <h3>Growth Attracts Success</h3>
+                <p>“If you want more, you must become more. Success is not something you pursue; it is something you attract by the person you become.”</p>
+                <footer>— Jim Rohn</footer>
+            </blockquote>
+        </div>
+
+        <div class="decorative">
+            <p>✨ Built with Vision ✨</p>
+        </div>
+
+        <div class="footer" id="contact">
+            <p>Contact: benard@ceovibes.africa | IG: @bria_peculiar | 2025 & Beyond</p>
+        </div>
+        <script>
+            const container = document.querySelector('.quotes');
+            const quotes = container.children;
+            let index = 0;
+
+            function scrollToQuote() {
+                index = (index + 1) % quotes.length;
+                container.scrollTo({
+                    left: quotes[index].offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Auto-slide every 5 seconds (5000 ms)
+            setInterval(scrollToQuote, 5000);
+
+            // Optional: Pause the sliding when the user hovers over the quotes section
+            container.addEventListener('mouseenter', () => {
+                clearInterval(autoSlide); // Stops auto-slide
+            });
+
+            container.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(scrollToQuote, 5000); // Resumes auto-slide
+            });
+        </script>
+    </body>
+</html>
