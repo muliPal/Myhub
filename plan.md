@@ -10,6 +10,8 @@
         3. Rich Dad Poor Dad.
         4. The Monk Who Sold His Ferrari.
 * [ ] On the featured projects section, add, create a link to my stories of how i have built all of these projects from scratch on every project.
+* [ ] With the contact button, do a pop up like Naipei's with a small list of my contacts(20-05-2025)
+* [ ] Animate the about me text.
         
     # Workplan 14/05/2025
 
@@ -19,4 +21,8 @@ the description should have screenshots of the project.
 * [ ] On the menu section, add links to my projects and portfolio.
 * [ ] On the footer section, add my contacts details.
 * [ ] On The menu section, add a slider with my name and tech stack.
+* [ ] On the education part, add certifictions that i intend to achieve to showcase my skills.
+
+# workplan 06/06/25
+
 * [ ] 
